@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    height: 80px;
+    box-shadow: 1px 1px 5px 2px #5a5959;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+a {
+    text-decoration: none;
+    font-size: clamp(16px, 3vw, 24px);
+    color: #454242;
+    font-weight: 500;
+}
+/* անալոգային ժամ */
+.clock {
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    margin: 50px auto;
+}
+ul {
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+li{
+    position: absolute;
+    font-size: 34px;
+}
+li:nth-child(12){
+    left: 50%;
+    transform: translateX(-50%);
+}
+li:nth-child(1){
+    top: 6%;
+    left: 75%;
+    transform: translateX(-75%);
+}
+li:nth-child(2){
+    top: 23%;
+    left: 91%;
+    transform: translateX(-91%);
+}
+li:nth-child(3){
+    top: 43%;
+    left: 98%;
+    transform: translateX(-98%);
+}
+li:nth-child(4){
+    top: 65%;
+    left: 90%;
+    transform: translateX(-90%);
+}
+li:nth-child(5){
+    top: 82%;
+    left: 74%;
+    transform: translateX(-74%);
+}
+li:nth-child(6){
+    top: 87%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+li:nth-child(7){
+    top: 82%;
+    left: 27%;
+    transform: translateX(-27%);
+}
+li:nth-child(8){
+    top: 65%;
+    left: 9%;
+    transform: translateX(-9%);
+}
+li:nth-child(9){
+    top: 43%;
+    left: 3%;
+    transform: translateX(-3%);
+}
+li:nth-child(10){
+    top: 23%;
+    left: 9%;
+    transform: translateX(-9%);
+}
+li:nth-child(11){
+    top: 6%;
+    left: 26%;
+    transform: translateX(-26%);
+}
+.hours, .mins, .seconds {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: 0 0;
+}
+.hours {
+    width: 30%;
+    height: 4px;
+    background-color: darkblue;
+}
+.mins {
+    width: 35%;
+    height: 3px;
+    background-color: green;
+}
+.seconds {
+   width: 39%;
+   height: 2px;
+   background-color: red;
+}
+.round {
+    position: absolute;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    background-color: #2d2929;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+/* օրացույց */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 450px);
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 150px;
+} 
+.calendar div {
+    margin-top: 10px;
+    text-align: center;
+}
+.element {
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center; 
+}
+h2 {
+    border-bottom: 1px solid black;
+    padding: 20px 0px;
+    color:rgb(5, 81, 5);
+    font-size: 34px;
+}
+.first{    
+    border-left: 1px solid black;
+    padding: 8px 12px 8px 12px;  
+    color: darkblue;
+    font-size: 20px;
+    font-weight: 900;
+}
+.second {
+    border-bottom: 1px solid black;
+    padding: 8px 12px 8px 12px;   
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+.red {
+    color: red;
+    border-bottom: 1px solid black;
+    padding: 7px 11px 7px 11px;   
+}
+.black{
+    margin-top: 38px;
+}
+.day {
+    border: 2px solid red;
+    border-radius: 50%;
+}
+/* Tic-Tac-Toe Game */
+.Game-name {
+    color: darkblue;
+    width: max-content;
+    margin: 0px auto 25px auto;
+    font-size: clamp(20px, 5vw, 35px);
+}
+.Game-button {
+    width: clamp(120px, 20vw, 150px);
+    height: clamp(30px, 5vw, 40px);
+    display: block;
+    margin: 0px auto 25px auto;
+    transform: translateX(-180px);
+    font-size: clamp(16px, 2vw, 18px);
+    border-radius: 45px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+}
+.container-game{
+    margin: 0px auto 50px auto;
+    width: 450px;
+    height: 450px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.container-game .cell {
+   position: relative;
+   border: 1px solid black;   
+   cursor: pointer;
+}  
+.fa-xmark {
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    color: #2d2dd1eb;
+}
+.fa-circle {
+    font-size: 65px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    color: crimson;
+}
+.line {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    background-color: black;
+    transition: opacity 0.5s ease;
+}
+.line-0, .line-1, .line-2, .line-3, .line-4, .line-5, .line-6, .line-7 {
+    opacity: 1;
+    z-index: 2;
+}
+.line-0 {
+    width: 400px;
+    height: 10px;
+    margin-left: 25px;
+    margin-top: 70px;
+    position: absolute;
+}
+.line-1 {
+    width: 400px;
+    height: 10px;
+    margin-left: 25px;
+    margin-top: 220px;
+    position: absolute;
+}
+.line-2 {
+    width: 400px;
+    height: 10px;
+    margin-left: 25px;
+    margin-top: 370px;
+    position: absolute;
+}
+.line-3 {
+    width: 10px;
+    height: 400px;
+    margin-top: 25px;
+    margin-left: 70px;
+    transform: rotate(180deg);
+}
+.line-4 {
+    width: 10px;
+    height: 400px;
+    margin-top: 25px;
+    margin-left: 220px;
+    transform: rotate(180deg);
+}
+.line-5 {
+    width: 10px;
+    height: 400px;
+    margin-top: 25px;
+    margin-left: 370px;
+    transform: rotate(180deg);
+}
+.line-6 {
+    width: 10px;
+    height: 450px;
+    margin-left: 220px;
+    transform: rotate(135deg);
+}
+.line-7 {
+    width: 450px;
+    height: 10px;
+    margin-top: 220px;
+    transform: rotate(135deg);
+} 
+/* Որոնել գրքեր */
+form {
+    margin-top: 25px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(20px, 7vw, 50px);
+    padding-bottom: 35px;
+}
+input {
+    width: clamp(250px, 35vw, 350px);
+    height: clamp(20px, 7vw, 50px);
+    border-radius: 25px;
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: 100;
+    padding-left: 20px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px 2px #9b9898;
+    outline: 0;
+}
+form button {
+    width: clamp(120px, 20vw, 170px);
+    height: clamp(20px, 7vw, 50px);
+    background-color: #16c816;
+    color: white;
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: 100;
+    letter-spacing: 1px;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px 2px #9b9898;
+    cursor: pointer;
+}
+hr {
+    width: 50%;
+    margin: 0px auto 25px auto;
+}
+.container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.container div {
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container hr {
+    margin: 15px auto;
+}
+.container img {
+    width: 160px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.container a {
+    text-decoration: none;
+    font-size: 18px;
+    color: darkblue;
+}
+.container h2 {
+    color: crimson;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
