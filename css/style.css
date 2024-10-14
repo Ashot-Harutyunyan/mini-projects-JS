@@ -9,12 +9,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: clamp(20px, 5vw, 50px);
     margin-bottom: 50px;
 }
 a {
     text-decoration: none;
-    font-size: clamp(16px, 3vw, 24px);
+    font-size: clamp(16px, 2vw, 25px);
     color: #454242;
     font-weight: 500;
 }
@@ -305,7 +305,7 @@ form {
     gap: clamp(20px, 7vw, 50px);
     padding-bottom: 35px;
 }
-input {
+.search-books-input {
     width: clamp(250px, 35vw, 350px);
     height: clamp(20px, 7vw, 50px);
     border-radius: 25px;
@@ -333,7 +333,7 @@ hr {
     width: 50%;
     margin: 0px auto 25px auto;
 }
-.container {
+.container-books {
     width: 60%;
     margin: 0 auto;
     display: flex;
@@ -342,7 +342,7 @@ hr {
     gap: 30px;
     flex-wrap: wrap;
 }
-.container div {
+.container-books div {
     border: 2px solid black;
     padding: 15px;
     border-radius: 15px;
@@ -350,21 +350,128 @@ hr {
     flex-direction: column;
     align-items: center;
 }
-.container hr {
+.container-books hr {
     margin: 15px auto;
 }
-.container img {
+.container-books img {
     width: 160px;
+    height: 250px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
-.container a {
+.container-books a {
     text-decoration: none;
     font-size: 18px;
     color: darkblue;
 }
-.container h2 {
+.container-books h2 {
     color: crimson;
     letter-spacing: 1px;
     margin-top: 50px;
+}
+/* արժույթի փոխարժեք */
+.currency-exchange-rate {
+    width: 500px;
+    margin: 50px auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.currency-exchange-rate-container {
+    position: relative;
+    border: 2px solid black;
+    width: 210px;
+    max-height: 48px;
+    display: grid;
+    grid-template-rows: repeat(6, 48px);
+    grid-template-columns: 210px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.first-element {
+    grid-row: 1/2;
+}
+.container-open {
+    max-height: 285px; 
+    transition: all 0.5s;
+}
+.currency-exchange-rate-container div {
+    border-bottom: 2px solid black;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.fa-circle-chevron-down {
+    position: absolute;
+    z-index: 2;
+    top: 8px;
+    right: 5px;
+    font-size: 30px;
+    color: #827c7c;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.icon-transform {
+    transform: rotate(180deg);
+}
+.arrow-rotate {
+    width: 56px;
+    height: 52px;
+    cursor: pointer;
+    line-height: 70px;
+    padding-left: 5px;
+    text-align: center;
+}
+.fa-repeat {
+    font-size: 40px;
+    transition: all 0.5s;
+    color: #ba1f3e;
+}
+img {
+    width: 50px;
+    height: 35px;
+    vertical-align: middle;
+    position: relative;
+    z-index: -1;
+}
+span {
+    font-size: 30px;
+    padding-left: 15px;
+    vertical-align: middle;
+    position: relative;
+    z-index: -1;
+}
+.container-input {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-div {
+    border: 1px solid black;
+    padding-right: 5px;
+}
+.container-input .input {
+    width: 175px;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    outline: 0;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+.fa-circle-xmark {
+    font-size: 20px;
+    color: #bbbbbb;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.number {
+    border: 1px solid black;
+    width: 210px;
+    height: 30px;
+    padding-left: 5px;
+    font-size: 20px;
+    line-height: 28px;
 }

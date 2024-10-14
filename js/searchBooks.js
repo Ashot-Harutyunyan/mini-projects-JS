@@ -1,6 +1,6 @@
 const form = document.querySelector('form')
-const container = document.querySelector('.container')
-const input = document.querySelector('input')
+const container = document.querySelector('.container-books')
+const input = document.querySelector('.search-books-input')
 
 form.addEventListener('submit', function(e){
     e.preventDefault()

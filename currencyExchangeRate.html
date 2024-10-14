@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="analogClock.html">Analog Clock</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="game.html">Game</a>
+        <a href="searchBooks.html">Search Books</a>
+        <a href="currencyExchangeRate.html">Search Books</a>
+    </nav>
+
+    <!-- արժույթի փոխարժեք -->
+
+    <div class="currency-exchange-rate">
+        <div class="currency-exchange-rate-container">
+            <i class="fa-solid fa-circle-chevron-down"></i>
+
+            <div data-n="AMD">
+                <img src="./img/Flag_of_Armenia.png" alt=""><span>AMD</span>
+            </div>
+
+            <div data-n="USD">
+                <img src="./img/flag_of_USA.png" alt=""><span>USD</span>
+            </div>
+
+            <div data-n="EUR">
+                <img src="./img/flag_of_Europe.png" alt=""><span>EUR</span>
+            </div>
+
+            <div data-n="RUB">
+                <img src="./img/flag_of_Russia.png" alt=""><span>RUB</span>
+            </div>
+
+            <div data-n="GEL">
+                <img src="./img/flag_of_GORGIA.png" alt=""><span>GEL</span>
+            </div>
+
+            <div data-n="GBP">
+                <img src="./img/flag_of_GBP.png" alt=""><span>GBP</span>
+            </div>
+        </div>
+
+        <div class="arrow-rotate">
+            <i class="fa-solid fa-repeat"></i>
+        </div>
+
+        <div class="currency-exchange-rate-container">
+            <i class="fa-solid fa-circle-chevron-down"></i>
+            
+            <div data-n="USD">
+                <img src="./img/flag_of_USA.png" alt=""><span>USD</span>
+            </div>
+
+            <div data-n="AMD">
+                <img src="./img/Flag_of_Armenia.png" alt=""><span>AMD</span>
+            </div>
+
+            <div data-n="EUR">
+                <img src="./img/flag_of_Europe.png" alt=""><span>EUR</span>
+            </div>
+
+            <div data-n="RUB">
+                <img src="./img/flag_of_Russia.png" alt=""><span>RUB</span>
+            </div>
+
+            <div data-n="GEL">
+                <img src="./img/flag_of_GORGIA.png" alt=""><span>GEL</span>
+            </div>
+            
+            <div data-n="GBP">
+                <img src="./img/flag_of_GBP.png" alt=""><span>GBP</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-input">
+        <div class="input-div">
+            <input type="text" class="input">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <p class="number"></p>
+    </div>
+    <script src="js/currencyExchangeRate.js"></script>
+</body>
+</html>
